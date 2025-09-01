@@ -1,11 +1,26 @@
 ---
 layout: center
-transition: view-transition
 ---
+
+<style>
+::view-transition-old(view-transition-circle),
+::view-transition-new(view-transition-circle) {
+  animation-duration: 500ms !important;
+  animation-timing-function: ease-in-out;
+}
+
+::view-transition-group(view-transition-circle) {
+  animation-duration: 500ms !important;
+}
+
+.view-transition-circle {
+  view-transition-name: view-transition-circle;
+}
+</style>
 
 <div
   v-motion
-  :initial="{ opacity: 1 }"
+  :initial="{ opacity: 1, y:0 }"
   :click-2="{ opacity: 0, y: -50, transition: { duration: 600, ease: 'easeIn' } }"
 >
 
@@ -24,7 +39,7 @@ transition: view-transition
   :click-1="{ opacity: 1, y: 0, transition: { duration: 800, ease: 'easeOut' } }"
   class="font-geist text-6xl font-bold"
 >
-    Is this even possible?
+    Is it even possible?
 </h1>
 
 </div>
@@ -86,7 +101,4 @@ const styles = StyleSheet.create({
 
 <!-- Click triggers -->
 <div v-click class="absolute inset-0 pointer-events-none"></div>
-<div v-click class="absolute inset-0 pointer-events-none"></div>
-<div v-click class="absolute inset-0 pointer-events-none"></div>
-<div v-click class="absolute inset-0 pointer-events-none"></div>
-<div v-click class="absolute inset-0 pointer-events-none"></div>
+

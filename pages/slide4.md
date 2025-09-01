@@ -3,80 +3,88 @@ layout: center
 transition: view-transition
 ---
 
+<div class="flex flex-row">
+
+<div 
+    v-motion
+    :initial="{ opacity: 0, x: 0, y: 50 }"
+    :enter="{ opacity: 1, x: 200, y: 50, transition: { duration: 600, ease: 'easeOut' } }"
+    :click-3="{ opacity: 1, x: -30, y: 50, transition: { duration: 400, ease: 'easeIn' } }"
+    class="flex gap-6 flex-col"
+>
 <p
     v-motion
-    :initial="{ opacity: 0, y: 50 }"
-    :click-1="{ opacity: 1, y: 0, transition: { duration: 600, ease: 'easeOut' } }"
-    :click-2="{ opacity: 0, y: -100, transition: { duration: 400, ease: 'easeIn' } }"
-    class="font-geist text-6xl font-bold"
+    :initial="{ opacity: 1 }"
+    :click-3="{ opacity: 0.3, transition: { duration: 400, ease: 'easeIn' } }"
+    class="font-geist text-2xl font-bold"
 >
-    But wait...
+StyleSheet.create</p>
+
+```js {all|2-7|9}
+create<+S: ____Styles_Internal>(obj: S): $ReadOnly<S> {
+    if (__DEV__) {
+      for (const key in obj) {
+        if (obj[key]) {
+          Object.freeze(obj[key]);
+        }
+      }
+    }
+    return obj;
+},
+```
+</div>
+
+<div
+    v-motion
+    :initial="{ opacity: 0, x: 50 }"
+    :click-3="{ opacity: 1, x: 0, transition: { duration: 400, ease: 'easeIn' } }"
+    class="flex gap-10 flex-col"
+>
+
+<div>
+
+<p class="font-geist text-2xl font-bold">Benchmark</p>
+<p class="font-geist text-md font-light color-white/75">
+    100 StyleShets with 5 styles and 2 properties each
 </p>
+
+</div>
 
 <p
     v-motion
-    :initial="{ opacity: 0, y: 50 }"
-    :click-2="{ opacity: 1, y: -50, transition: { duration: 600, ease: 'easeOut' } }"
-    :click-3="{ opacity: 0, y: -100, transition: { duration: 400, ease: 'easeIn' } }"
-    class="font-geist text-6xl font-bold"
+    :initial="{ opacity: 0 }"
+    :click-4="{ opacity: 1, transition: { duration: 400, ease: 'easeIn' } }"
 >
-    We don't need StyleSheet
+    16x times faster!
 </p>
 
 <div
     v-motion
-    :initial="{ opacity: 0, y: 50 }"
-    :click-3="{ opacity: 1, y: 0, transition: { duration: 600, ease: 'easeOut' } }"
-    :click-5="{ opacity: 0, y: -100, transition: { duration: 400, ease: 'easeIn' } }"
-    class="flex flex-col gap-4 absolute bottom-40 left-30"
+    :initial="{ opacity: 0 }"
+    :click-5="{ opacity: 1, transition: { duration: 400, ease: 'easeIn' } }"
+    class="flex gap-4 items-end justify-center"
 >
 
-<p class="font-geist text-3xl font-bold">Inline styles</p>
 
-````md magic-move {at:3, lines: true}
+<div class="h-[20px] w-20 bg-yellow-400/70 rounded-md flex items-center justify-center relative">
+   <span class="font-geist font-bold text-sm text-black/75">0.7 μs</span>
+   <span class="font-geist font-xs font-thin absolute -bottom-[40px]">No freeze</span>
+</div>
 
-```tsx {all|all}
-import { View, StyleSheet } from 'react-native'
-
-<View style={styles.box} />
-
-const styles = StyleSheet.create({
-    box: {
-        width: 100,
-        height: 100,
-        backgroundColor: 'orange',
-    }
-})
-```
-
-```tsx {all|all}
-import { View } from 'react-native'
-
-<View 
-    style={{
-        width: 100,
-        height: 100,
-        backgroundColor: 'orange',
-    }}
-/>
-```
-
-````
+<div
+    class="h-[240px] w-20 rounded-md flex items-center justify-center bg-purple-400/70 relative"
+>
+   <span class="font-geist font-bold text-xl text-black/75">11.5 μs</span>
+   <span class="font-geist font-xs font-thin absolute -bottom-[40px]">Freeze</span>
+</div>
 
 </div>
 
-<img 
-    v-motion
-    :initial="{ opacity: 0, y: 0 }"
-    :click-4="{ opacity: 1 }"
-    :click-5="{ opacity: 0, y: -100, transition: { duration: 400, ease: 'easeIn' } }"
-    src="../assets/frame.png" 
-    class="w-[300px] absolute top-0 right-30" 
-/>
+</div>
 
+</div>
 
 <!-- Click triggers -->
-<div v-click class="absolute inset-0 pointer-events-none"></div>
 <div v-click class="absolute inset-0 pointer-events-none"></div>
 <div v-click class="absolute inset-0 pointer-events-none"></div>
 <div v-click class="absolute inset-0 pointer-events-none"></div>

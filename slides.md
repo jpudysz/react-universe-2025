@@ -20,7 +20,7 @@ addons:
 <style>
 
 .slidev-layout {
-    background: #1F1A12;
+    background: #121212;
 }
 
 .slidev-layout p {
@@ -57,4 +57,104 @@ src: ./pages/slide4.md
 
 ---
 src: ./pages/slide5.md
+---
+
+---
+src: ./pages/slide6.md
+---
+
+---
+src: ./pages/slide7.md
+---
+
+---
+src: ./pages/slide8.md
+---
+
+---
+src: ./pages/slide9.md
+---
+
+---
+src: ./pages/slide10.md
+---
+
+---
+src: ./pages/slide11.md
+---
+
+---
+src: ./pages/slide12.md
+---
+
+---
+src: ./pages/slide13.md
+---
+
+---
+src: ./pages/slide14.md
+---
+
+---
+src: ./pages/slide15.md
+---
+
+---
+src: ./pages/slide16.md
+---
+
+---
+src: ./pages/slide17.md
+---
+
+---
+src: ./pages/slide18.md
+---
+
+---
+src: ./pages/slide19.md
+---
+
+---
+src: ./pages/slide20.md
+---
+
+---
+src: ./pages/slide21.md
+---
+
+---
+src: ./pages/slide22.md
+---
+
+---
+src: ./pages/slide23.md
+---
+
+---
+src: ./pages/slide24.md
+---
+
+---
+src: ./pages/slide25.md
+---
+
+---
+src: ./pages/slide26.md
+---
+
+---
+src: ./pages/slide27.md
+---
+
+---
+src: ./pages/slide28.md
+---
+
+---
+src: ./pages/slide29.md
+---
+
+---
+src: ./pages/slide30.md
 ---
