@@ -13,6 +13,8 @@ fonts:
     sans: 'Geist'
     weights: '100,200,300,400,500,600,700,800,900'
     mono: Fira Code
+addons:
+  - fancy-arrow
 ---
 
 <style>
@@ -24,6 +26,17 @@ fonts:
 .slidev-layout p {
     margin: 0;
 }
+
+.slidev-code-wrapper {
+  background-color: #000 !important;
+  padding: 8px !important;
+  border-radius: 10px !important;
+}
+
+pre {
+  background-color: #000 !important;
+}
+
 </style>
 
 ---
@@ -38,3 +51,10 @@ src: ./pages/slide2.md
 src: ./pages/slide3.md
 ---
 
+---
+src: ./pages/slide4.md
+---
+
+---
+src: ./pages/slide5.md
+---
