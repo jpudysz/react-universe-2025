@@ -44,4 +44,28 @@ function fastAddProperties(payload, props, validAttributes) {
 }
 ```
 
+<div 
+    v-motion
+    :initial="{ opacity: 0, y: 50 }"
+    :click-2="{ opacity: 1, y: 0, transition: { duration: 600, ease: 'easeOut' } }"
+    class="flex flex-col mt-5"
+>
+
+<p class="font-mono font-light text-sm color-white/75">
+<span class="font-bold italic">width:</span> 100 -> <span class="text-pink-400/90">100</span>
+</p>
+
+<p class="font-mono font-light text-sm color-white/75">
+<span class="font-bold italic">height:</span> 100 -> <span class="text-pink-400/90">100</span>
+</p>
+
+<p class="font-mono font-light text-sm color-white/75">
+<span class="font-bold italic">backgroundColor:</span> orange -> <span class="text-pink-400/90">4294944000</span>
+</p>
+
 </div>
+
+</div>
+
+<!-- Click triggers -->
+<div v-click class="absolute inset-0 pointer-events-none"></div>

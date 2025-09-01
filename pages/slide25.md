@@ -1,7 +1,5 @@
 ---
-layout: center
+layout: image
 ---
 
-# Slide 25
-
-Content placeholder for slide 25
+<img src="../assets/background-2.jpg" class="absolute inset-0">

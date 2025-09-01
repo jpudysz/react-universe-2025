@@ -16,7 +16,8 @@ export default defineShikiSetup(() => {
       'html',
       'bash',
       'md',
-      'markdown'
+      'markdown',
+      'cpp'
     ],
     transformers: [
       // Add any transformers you need
