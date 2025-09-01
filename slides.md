@@ -158,3 +158,43 @@ src: ./pages/slide29.md
 ---
 src: ./pages/slide30.md
 ---
+
+---
+src: ./pages/slide31.md
+---
+
+---
+src: ./pages/slide32.md
+---
+
+---
+src: ./pages/slide33.md
+---
+
+---
+src: ./pages/slide34.md
+---
+
+---
+src: ./pages/slide35.md
+---
+
+---
+src: ./pages/slide36.md
+---
+
+---
+src: ./pages/slide37.md
+---
+
+---
+src: ./pages/slide38.md
+---
+
+---
+src: ./pages/slide39.md
+---
+
+---
+src: ./pages/slide40.md
+---
